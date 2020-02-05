@@ -15,7 +15,7 @@ function mostrarMasDetallesLibro(idLibro) {
                 </div>
         
                 <div class="col-12 col-md-6 text-center text-md-left mt-5">
-                        <h2 class="shop-item-title mb-3"><span>Título: </span>${libro.titulo}</h2>
+                        <h2 class="shop-item-title mb-3">${libro.titulo}</h2>
                         <h3 class="shop-item-price">$ ${libro.precio}</h3>
                         <button class="btn btn-secondary mt-3 shop-item-button">
                                 <i class="fas fa-cart-plus"></i> Agregar al carro
@@ -38,6 +38,27 @@ function mostrarMasDetallesLibro(idLibro) {
             </div>
                
         </div>`)
-        ready();
+            fetch(`http://localhost:8080/api/libro/todas?categoria=${libro.categoria.nombre}`)
+                .then(respuesta => respuesta.json())
+                .then(librosCategoria => {
+
+                    for (libro of librosCategoria) {
+                        $('#libros-misma-categoria').append(`
+                    <div class="col-md-3 col-sm-6 col-12 mb-5">
+                        <div class="card h-100 shop-item">
+                            <div class="card-img-top">
+                                <img class="img-fluid w-100 shop-item-image" src="${libro.imagen.url}" alt="libro 1">    
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="shop-item-title">${libro.titulo}</h5>
+                                <h5 class="shop-item-price">$ ${libro.precio}</h5>
+                                <button class="btn btn-secondary d-block m-auto shop-item-button"><i class="fas fa-cart-plus"></i> Agregar al carro</button>
+                            </div>
+                        </div>
+                    </div>`)
+                    }
+                    ready();
+                })
+
         })
 }
