@@ -1,0 +1,208 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* header */
+header img {
+    width: 15%;
+}
+header a {
+    color: whitesmoke;
+}
+
+header.header-site,
+footer.footer-site {
+    background-color: #e3b04b;
+}
+
+header nav a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+/* header: logo */
+.header-logo {
+  width: 55%;
+  margin: 0;
+  height: 80px;
+  text-align: right;
+  display: inline-block;
+  float: left;
+}
+
+
+/* SECTION*/
+.section {
+overflow: hidden;
+height: 85vh;
+width: 85vw;
+}
+
+/*Imagen*/
+.art1 {
+  width: 50vw;
+  height: 80vh;
+  float: left;
+  display: inline-block;
+  padding-top: 10px;
+}
+
+/*Formulario*/
+.art2 {
+  float: left;
+  height: 80vh;
+  display: inline-block;
+  padding-top: 10px;
+}
+.registrarsecon{
+  height: 5vh;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 4px;
+  border-bottom: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+.reg {
+  width: 14vw;
+  float: left;
+}
+
+.fab {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+.fab:hover{
+  color: #0D4659;
+}
+.o-wrap {
+  position: relative;
+}
+hr {
+  border-color: #fff;
+  border-width: 2px;
+  width: 30%;
+}
+.fa-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top:50%;
+  left: 50%;
+  padding: 0px 10px;
+  background-color: #f1d6ab;
+  color: #fff;
+}
+.formulario {
+  background-color: #f1d6ab;
+  border-width: 2px;
+  border-color: #444;
+  width: 50vw;
+  height: 79vh;
+  padding: 10px;
+  position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  display: inline-block;
+}
+
+form label {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+form input {
+  color: #0d4659;
+  text-align: center;
+}
+.registrate {
+  font-family: 'Lusitana', serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #0D4659;
+  letter-spacing: 2px;
+}
+#nombre , #apellido , #email , #contraseña {
+  box-sizing: border-box;
+  width: 60%;
+  height: 5vh;
+  color: #0D4659;
+  font-size: 0.75em;
+  background-color: white;
+  border: 2px solid white;
+  padding: 4px;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+#nombre:hover, #apellido:hover, #email:hover, #contraseña:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#send-button {
+  box-sizing: border-box;
+  width: 25%;
+  height: 40px;
+  color: #0D4659;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+#send-button:hover {
+  color: white;
+  background-color: #0D4659;
+}
+#sen-button:focus {
+  box-shadow: none;
+}
+
+form input[type=checkbox] {
+color: #CFE3E3;
+  font-size: 0.5em;
+}
+
+@media (max-width:1199px) {
+.art2 {
+  width: 100vw;
+  display: block;
+}
+.formulario {
+  width: 100vw;
+  padding-top: 30px;
+
+}
+.reg{
+  width: 33%;
+}
+.registrate{
+  margin-bottom: 20px;
+}
+#nombre{
+  margin-top: 20px;
+}
+#send-button{
+  width: 30%;
+  margin-top: 10px;
+}
+}
+
+/* footer */

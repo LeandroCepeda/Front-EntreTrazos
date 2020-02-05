@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EntreTrazos</title>
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!--Google-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lusitana"
+      rel="stylesheet"
+    />
+    <!--FontAwesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <!--EntreTrazos Stylesheets-->
+    <link rel="stylesheet" href="css\registrate-style.css" />
+    <title>¡Registrate!</title>
+  </head>
+  <body>
+    <!--HEADER-->
+      <header class="header-site">
+          <div class="container-fluid p-0">
+              <nav class="navbar navbar-expand-lg">
+                  <a class="navbar-brand w-50 d-md-block d-none" href="home.html"><img class="img-fluid" src="img/logo.jpeg" alt="logotipo"></a>
+                  <a class="d-md-none enlace-header" href=""><i class="d-md-none enlace-header fas fa-book"></i> EntreTrazos</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <i class="fas fa-bars text-light"></i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav w-100 justify-content-md-end align-items-center">
+                        <ul class="navbar-nav w-100 justify-content-md-end align-items-center">
+                          <li class="nav-item">
+                            <a class="nav-link enlace-header" href="register.html" style="color: black;"> <strong>Registrarse</strong> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link enlace-header" href="login.html" style="color: black;"> <strong>Ingresar</strong> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#carritoVentana" class="nav-link enlace-header" data-toggle="modal" style="color: black;"><i class="fas fa-shopping-cart m-2 fa-2x"></i></a>
+                        </li>
+                        </ul>
+                      </ul>
+
+
+                      <!--Ventana del carrito-->
+            <div class="modal fade" tabindex="-1" id="carritoVentana">
+              <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header d-block">
+                          <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h1 style="text-align: center;">Carrito</h1>
+                      </div>
+                      <div class="modal-body">
+                              <div class="container">
+                                  <div class="row" style="display: flex; justify-content: center;">
+                                          <div class="col-10 d-block" style="display: flex; justify-content: center; vertical-align: middle;align-items: center;padding: 15px;background:#f0efef;">
+                                                  <img class="" src="img/libro1.jpg" alt="libro 1" style="width: 100px; height: 160px; border: solid 1px black;">
+                                                  <span style="font-size: 24px; margin-left: 5%; margin-top: 5%;"> 2 x <a href="productos/accion/elLibroDeLosLibros.html" style="color: black; font-size: 24px; margin-left: 5%;"> El libro de los libros</a></span>
+                                                  <span style="font-size: 24px; color: blue; margin-left: 5%;"><strong>$600</strong></span>
+                                                  <span style="font-size: 15px; margin-left: 2%;"><a href="" style="color: black;">eliminar uno</a></span>
+                                                  <span style="font-size: 15px; margin-left: 2%;"><a href="" style="color: black;">eliminar todo</a></span>
+                                              </div>
+                                  </div>
+                              </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button class="btn btn-primary">Vaciar carrito</button>
+                          <button class="btn btn-success">Comprar</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+                  </div>
+              </nav>
+          </div>
+
+      </header>
+
+      <div class="container-fluid d-flex justify-content-between navegacion-mobile flex-column flex-md-row bg-dark">
+          <ul class="nav align-items-center d-flex flex-column flex-md-row d-md-flex">
+              <li class="nav-item text-center d-block d-md-inline-block">
+                  <a class="nav-link active text-light" href="home.html">Home</a>
+              </li>
+              <li class="nav-item dropdown text-light text-center d-block d-md-inline-block">
+                  <a
+                      class="nav-link dropdown-toggle text-light"
+                      href="#shop"
+                      id="navbarDropdown"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                  >
+                      Categorias
+                  </a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Suspenso</a>
+                      <a class="dropdown-item" href="#">Terror</a>
+                      <a class="dropdown-item" href="#">Romanticas</a>
+                      <a class="dropdown-item" href="producto/accion/accion.html">Accion</a>
+                  </div>
+              </li>
+
+              <li class="nav-item d-block d-md-none w-100 text-center">
+                  <a class="nav-link active text-light" href="#">Libros Nuevos</a>
+              </li>
+              <li class="nav-item d-block d-md-none w-100 text-center">
+                  <a class="nav-link active text-light" href="#">Libros Usados</a>
+              </li>
+              <li class="nav-item d-none d-md-block">
+                  <a class="nav-link active text-light" href="Productos/productos.html">Productos</a>
+          </ul>
+          <div class="d-flex align-items-center flex-column flex-md-row">
+              <input class="form-control mr-sm-2 m-2" type="search" placeholder="Buscá tu libro" aria-label="Search">
+              <i class="fas fa-search text-light d-md-block d-none"></i>
+          </div>
+      </div>
+<main>
+    <!--SECTION-->
+    <section class="section mt-5">
+      <div class="register">
+        <!--Imagen-->
+        <article class="art1 d-none d-sm-none d-md-none d-lg-none d-xl-block">
+          <img
+            src="img\libreria.jpg"
+            alt="libreria"
+            width="100%"
+            height="100%"
+          />
+        </article>
+        <!--Form-->
+        <article class="art2">
+          <form class="formulario" action="index.html" method="post">
+            <p class="registrate">
+              ¡Registrate!
+            </p>
+            <div class="o-wrap">
+              <hr />
+              <i class="far fa-circle"></i>
+            </div>
+            <p>
+              <input
+                id="nombre"
+                type="text"
+                name="nombre"
+                value=""
+                placeholder="Nombre"
+                required
+              />
+            </p>
+            <p>
+              <input
+                id="apellido"
+                type="text"
+                name="apellido"
+                value=""
+                placeholder="Apellido"
+                required
+              />
+            </p>
+            <p>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                value=""
+                placeholder="Email"
+                required
+              />
+            </p>
+            <p>
+              <input
+                id="contraseña"
+                type="password"
+                name="contraseña"
+                value=""
+                placeholder="Contraseña"
+                required
+              />
+            </p>
+            <p>
+              <input
+                id="contraseña"
+                type="password"
+                name="contraseña"
+                value=""
+                placeholder="Repita su contraseña"
+                required
+              />
+            </p>
+            <p>
+
+              <input class="tyc" type="checkbox" name="" value="t&c" required />
+              Estoy de acuerdo con los términos y condiciones.
+            </p>
+            <p>
+              <button id="send-button" type="submit" name="button">
+                <i class="far fa-paper-plane"></i> Enviar
+              </button>
+            </p>
+
+          </form>
+        </article>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer-site mt-5">
+        <div class="container-fluid">
+            <div class="row text-left">
+                <div class="col-md-6 col-sm-12 footer-social text-center text-md-left">
+                    <h5 class="text-light mt-2 pr-3">Seguinos en nuestras Redes</h5>
+                    <div class="column text-light mt-3 mb-3 pr-4">
+                        <a class="mr-3 text-light" href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a class="mr-3 text-light" href="www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a class="mr-3 text-light" href="www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a class="mr-3 text-light" href="www.youtube.com"><i class="fab fa-youtube"></i></a>
+                        <a class="mr-3 text-light" href="plus.google.com"><i class="fab fa-google-plus"></i></a>
+                </div>
+
+                </div>
+                <div class="col-md-6 col-sm-12 text-md-right text-center">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Acerca de Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
+                        </li>
+                    </ul>
+                </div>
+                <p class=" mt-2 text-light w-100 text-center">Copyright ©2019 Todos los derechos reservados | Página creada por <span>EntreTrazos</span></p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--SCRIPTS-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EntreTrazos</title>
+
+    <!-- FONT-AWESOME -->
+    <script src="https://kit.fontawesome.com/7db58c3e37.js" crossorigin="anonymous"></script>
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/home-styles.css">
+</head>
+
+<body>
+
+    <header class="header-site">
+    </header>
+
+
+    <div class="container-fluid d-flex justify-content-between navegacion-mobile flex-column flex-md-row bg-dark">
+        <ul class="nav align-items-center d-flex flex-column flex-md-row d-md-flex">
+            <li class="nav-item text-center d-block d-md-inline-block">
+                <a class="nav-link active text-light" href="home.html">Home</a>
+            </li>
+            <li class="nav-item dropdown text-light text-center d-block d-md-inline-block">
+                <a class="nav-link dropdown-toggle text-light" href="#shop" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categorias
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Suspenso</a>
+                    <a class="dropdown-item" href="#">Terror</a>
+                    <a class="dropdown-item" href="#">Romanticas</a>
+                    <a class="dropdown-item" href="productos/accion/accion.html">Accion</a>
+                </div>
+            </li>
+
+            <li class="nav-item d-block d-md-none w-100 text-center">
+                <a class="nav-link active text-light" href="#">Libros Nuevos</a>
+            </li>
+            <li class="nav-item d-block d-md-none w-100 text-center">
+                <a class="nav-link active text-light" href="#">Libros Usados</a>
+            </li>
+            <li class="nav-item d-none d-md-block">
+                <a class="nav-link active text-light" href="productos/productos.html">Productos</a>
+        </ul>
+        <div class="d-flex align-items-center flex-column flex-md-row">
+            <input class="form-control mr-sm-2 m-2" type="search" placeholder="Buscá tu libro" aria-label="Search">
+            <i class="fas fa-search text-light d-md-block d-none"></i>
+        </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide mt-4" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active bg-dark"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1" class="bg-dark"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2" class="bg-dark"></li>
+        </ol>
+        <div class="carousel-inner border border-dark">
+            <div class="carousel-item active w-100">
+                <div class="row bg-carousel text-light"
+                    style="display: flex; justify-content: center; align-items: center;">
+                    <div class="col-md-4 text-center info-carousel">
+                        <p class="">AUTOR: RADIM MALINIC</p>
+                        <h3 class="font-weight-bold">BOOK OF IDEAS</h6>
+                            <p class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sint beatae
+                                ipsum enim molestiae nihil pariatur voluptatibus necessitatibus rem culpa. Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit. Aliquid ullam quasi officia numquam illo
+                                doloribus fugiat eum, eius, reiciendis nemo maiores aliquam temporibus explicabo
+                                laudantium libero quod. Exercitationem, quo perferendis.</p>
+                    </div>
+                    <div class="col-md-5" style="display: flex; justify-content: center; align-items: center;">
+                        <img src="img/header-img.png" class="img-fluid" alt="..." style="width: 65%;">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-item w-100">
+                <div class="row bg-carousel1 text-light"
+                    style="display: flex; justify-content: center; align-items: center;">
+                    <div class="col-md-4 text-center info-carousel">
+                        <p class="">AUTOR: A.V. CARDENET</p>
+                        <h3 class="font-weight-bold">EL CORAZÓN DEL LOBO NEGRO</h6>
+                            <p class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sint beatae
+                                ipsum enim molestiae nihil pariatur voluptatibus necessitatibus rem culpa. Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit. Aliquid ullam quasi officia numquam illo
+                                doloribus fugiat eum, eius, reiciendis nemo maiores aliquam temporibus explicabo
+                                laudantium libero quod. Exercitationem, quo perferendis.</p>
+                    </div>
+                    <div class="col-md-5" style="display: flex; justify-content: center; align-items: center;">
+                        <img src="img/header-img1.png" class="img-fluid" alt="..." style="width: 65%;">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-item w-100">
+                <div class="row bg-carousel2 text-light"
+                    style="display: flex; justify-content: center; align-items: center;">
+                    <div class="col-md-4 text-center info-carousel">
+                        <p class="">AUTOR: RACHEL AMPHLETT</p>
+                        <h3 class="font-weight-bold">LOOK CLOSER</h6>
+                            <p class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sint beatae
+                                ipsum enim molestiae nihil pariatur voluptatibus necessitatibus rem culpa. Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit. Aliquid ullam quasi officia numquam illo
+                                doloribus fugiat eum, eius, reiciendis nemo maiores aliquam temporibus explicabo
+                                laudantium libero quod. Exercitationem, quo perferendis.</p>
+                    </div>
+                    <div class="col-md-5" style="display: flex; justify-content: center; align-items: center;">
+                        <img src="img/header-img2.png" class="img-fluid" alt="..." style="width: 65%;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!--CARROUSEL-->
+
+    <main class="container-fluid">
+        <!--Ventana del carrito-->
+        <div class="modal fade" tabindex="-1" id="carritoVentana">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header d-block">
+                        <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <h2 class="section-header">CARRO DE COMPRAS</h2>
+                            <div class="cart-row">
+                                <span class="cart-item cart-header cart-column">LIBRO</span>
+                                <span class="cart-price cart-header cart-column">PRECIO</span>
+                                <span class="cart-quantity cart-header cart-column">CANTIDAD</span>
+                            </div>
+                            <div class="cart-items">
+
+
+                            </div>
+                            <div class="cart-total">
+                                <strong class="cart-total-title">Total</strong>
+                                <span class="cart-total-price">$0</span>
+                            </div>
+                            <button class="btn btn-success btn-purchase" type="button">COMPRAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Ventana del carrito-->
+        <section>
+            <div class="container pt-5">
+                <div class="row">
+                    <h3>Más Buscados</h3>
+                </div>
+            </div>
+
+            <div class="container pt-5">
+                <div class="row shop-items" id="seccion-mas-buscados">
+                    
+                </div>
+                <!--row-->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-site">
+    </footer>
+
+
+
+    <!--BOOTSTRAP-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="script/html-includes.js"></script>
+    <script src="script/scripts.js"></script>
+    <script src="script/carrito.js"></script>
+    
+
+</body>
+
+</html>
