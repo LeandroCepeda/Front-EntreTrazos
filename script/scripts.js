@@ -14,7 +14,7 @@ fetch("http://localhost:8080/api/libro/")
                     </div>
                     <div class="card-body text-center">
                         <h4 class="shop-item-title"><strong>${libro.titulo}</strong></h4>
-                        <h5 class="mt-3 shop-item-price">$ <strong>${libro.precio}</strong></h5>
+                        <h5 class="mt-3 shop-item-price">$<strong>${libro.precio}</strong></h5>
                         <button class="btn btn-secondary mt-3 shop-item-button"><i
                                 class="fas fa-cart-plus"></i>Agregar al carro</button>
 

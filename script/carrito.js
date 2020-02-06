@@ -28,11 +28,67 @@ function ready() {
 
 function purchaseClicked() {
     alert('Gracias por comprar en EntreTrazos!')
+
+    let cartTitles = document.querySelector('.cart-items').getElementsByClassName('cart-item-title')
+    let cartUnitPrice = document.querySelector('.cart-items').getElementsByClassName('cart-price')
+    let totalCart = document.querySelector('.cart-total-price').innerText.replace('$','');
+    let titulos = [];
+    let preciosUnitarios = [];
+
+    for (let i = 0; i < cartTitles.length; i++) {
+        let titulo = cartTitles[i].innerHTML;
+        titulos.push(titulo);
+    }
+    for(let i = 0; i < cartUnitPrice.length; i++) {
+        let precio = cartUnitPrice[i].innerHTML
+        preciosUnitarios.push(precio);
+    }
+
+    //FETCH PARA REALIZAR EL POST DE LA COMPRA
+    //ARMA UN JSON QUE SE VA A CREAR CON TITULOS COMO ELEMENTOS HAYA EN EL CARRITO.
+    Jsontitulo = '[';
+
+    for(let i = 0; i<titulos.length; i++) {
+        Jsontitulo += `{
+            "precioUnitario": "${preciosUnitarios[i]}",
+    		"libro": {
+    			"titulo": "${titulos[i]}"
+    		}
+        }`
+        if(i < (titulos.length -1)) {
+            Jsontitulo +=',';
+        } else {
+            Jsontitulo += ']}'
+        }
+    };
+
+    console.log(Jsontitulo); //para ver como me armo la consulta
+
+    var url = 'http://localhost:8080/api/compra/';
+    var data = `{
+        "fecha": "21/02/20",
+        "total": "${totalCart}",
+        "detalles":`;
+    data += Jsontitulo;
+    console.log(data);
+
+    fetch(url, {
+        method: 'POST', // or 'PUT'
+        body: data, // data can be `string` or {object}!
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
+
+
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
     updateCartTotal()
+
 }
 
 function removeCartItem(event) {
@@ -54,7 +110,7 @@ function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
-    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText.replace('$','')
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
