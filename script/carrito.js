@@ -34,6 +34,14 @@ function purchaseClicked() {
     let totalCart = document.querySelector('.cart-total-price').innerText.replace('$','');
     let titulos = [];
     let preciosUnitarios = [];
+    let currentDate = new Date();
+    let dateTime = "" + currentDate.getDate() + "/"
+    + (currentDate.getMonth()+1)  + "/" 
+    + currentDate.getFullYear() + " "  
+    + currentDate.getHours() + ":"  
+    + currentDate.getMinutes() + ":" 
+    + currentDate.getSeconds();
+
 
     for (let i = 0; i < cartTitles.length; i++) {
         let titulo = cartTitles[i].innerHTML;
@@ -46,30 +54,29 @@ function purchaseClicked() {
 
     //FETCH PARA REALIZAR EL POST DE LA COMPRA
     //ARMA UN JSON QUE SE VA A CREAR CON TITULOS COMO ELEMENTOS HAYA EN EL CARRITO.
-    Jsontitulo = '[';
-
+    let jsonDetalle = '[';
     for(let i = 0; i<titulos.length; i++) {
-        Jsontitulo += `{
+        jsonDetalle += `{
             "precioUnitario": "${preciosUnitarios[i]}",
     		"libro": {
     			"titulo": "${titulos[i]}"
     		}
         }`
         if(i < (titulos.length -1)) {
-            Jsontitulo +=',';
+            jsonDetalle +=',';
         } else {
-            Jsontitulo += ']}'
+            jsonDetalle += ']}'
         }
     };
 
-    console.log(Jsontitulo); //para ver como me armo la consulta
+    console.log(jsonDetalle); //para ver como me armo la consulta
 
     var url = 'http://localhost:8080/api/compra/';
     var data = `{
-        "fecha": "21/02/20",
+        "fecha": "${dateTime}",
         "total": "${totalCart}",
         "detalles":`;
-    data += Jsontitulo;
+    data += jsonDetalle;
     console.log(data);
 
     fetch(url, {
@@ -134,7 +141,7 @@ function addItemToCart(title, price, imageSrc) {
         </div>
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
-            <input class="cart-quantity-input" type="number" value="1">
+            <input class="cart-quantity-input" disabled type="number" value="1">
             <button class="btn btn-danger" type="button">REMOVE</button>
         </div>`
     cartRow.innerHTML = cartRowContents
