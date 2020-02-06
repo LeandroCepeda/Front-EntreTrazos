@@ -41,7 +41,7 @@ function mostrarMasDetallesLibro(idLibro) {
             fetch(`http://localhost:8080/api/libro/todas?categoria=${libro.categoria.nombre}`)
                 .then(respuesta => respuesta.json())
                 .then(librosCategoria => {
-
+                    $('#nombre-categoria').append(`<h3>Libros de la categoría ${libro.categoria.nombre} que te pueden interesar</h3>`)
                     for (libro of librosCategoria) {
                         $('#libros-misma-categoria').append(`
                     <div class="col-md-3 col-sm-6 col-12 mb-5">

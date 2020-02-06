@@ -40,7 +40,7 @@ function purchaseClicked() {
     + currentDate.getFullYear() + " "  
     + currentDate.getHours() + ":"  
     + currentDate.getMinutes() + ":" 
-    + currentDate.getSeconds();
+    + currentDate.getSeconds() + "";
 
 
     for (let i = 0; i < cartTitles.length; i++) {

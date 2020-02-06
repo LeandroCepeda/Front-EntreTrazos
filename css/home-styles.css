@@ -94,7 +94,7 @@ header nav a:hover {
   }
   .card-body
   {
-    background-color: seashell;
+    background-color:#FFFFF0;
   }
   
   /* .card-img-top {
@@ -217,4 +217,13 @@ header nav a:hover {
   display: block;
   margin: 40px auto 80px auto;
   font-size: 1.75em;
+}
+
+.color-boton {
+  background-color: #00FF7F;
+}
+
+.color-boton:hover {
+  color: white;
+  background-color: #3CB371;
 }

@@ -18,7 +18,7 @@ fetch("http://localhost:8080/api/libro/")
                         <button class="btn btn-secondary mt-3 shop-item-button"><i
                                 class="fas fa-cart-plus"></i>Agregar al carro</button>
 
-                        <a href="#libro${libro.id}" class="btn btn-primary mt-3" data-toggle="modal">Detalles</a>
+                        <a href="#libro${libro.id}" class="btn color-boton mt-3" data-toggle="modal">Detalles</a>
 
 
                         <!--MODAL-->
@@ -35,7 +35,7 @@ fetch("http://localhost:8080/api/libro/")
                                             style="padding-left: 10%; padding-right: 10%;">
                                             <div
                                                 class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 container d-block">
-                                                <img class="" src="${libro.imagen.url}" alt="libro 1"
+                                                <img class="border border-secondary rounded" src="${libro.imagen.url}" alt="libro 1"
                                                     style="text-align: center; width: 80%; margin-top: 15%;">
                                             </div>
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 mt-4 d-block container-fluid"
@@ -74,11 +74,9 @@ fetch("http://localhost:8080/api/libro/")
                                                 <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                                                     <h3>Estado:<strong>${libro.estado}</strong></h3>
                                                 </div>
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                                    <button class="btn btn-secondary"><i
-                                                    class="fas fa-cart-plus"></i>Agregar al carro</button>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center text-md-right">
                                                     <a href="detalle-libro.html?id=${libro.id}"
-                                                        class="btn btn-primary" id="boton-modal")">Mas detalles</a>
+                                                        class="btn color-boton" id="boton-modal")">Mas detalles</a>
                                                 </div>
                                             </div>
                                         </div>
