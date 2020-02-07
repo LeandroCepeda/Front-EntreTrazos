@@ -333,3 +333,19 @@ form input[type=checkbox] {
   background-color: #3CB371;
 }
 /*TERMINA REGISTER*/
+
+/*PAGINA CATEGORIAS*/
+div.lista-categorias ul li  {
+    font-size: 1.5em;
+    list-style-type: none;
+}
+
+div.lista-categorias ul li i {
+    color: #32CD32;
+    font-size: 0.8em;
+    list-style-type: none;
+    margin-right: 5px;
+}
+div.lista-categorias ul li a {
+    color: #32CD32;
+}
