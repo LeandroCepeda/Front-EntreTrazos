@@ -1,0 +1,335 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+/*VALORES PREDETERMINADOS DEL BODY*/
+body {
+    background: url(../img/fondo-pagina.jpg);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*BOTONES*/
+
+.btn.btn-secondary,
+.btn.color-boton {
+    
+}
+
+.btn.btn-purchase {
+    font-size: 1.5em;
+}
+
+
+/*HEADER*/
+
+/*NAVEGADOR*/
+
+/*TITULO DENTRO DEL NAVEGADOR*/
+.nombrePagina {
+    display: none;
+}
+.nav-bar {
+    background: #313131;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    line-height: 80px;
+    height: 80px;
+    z-index: 5555555;
+    opacity: 0.9;
+}
+.menu {
+    float: right;
+    line-height: 80px;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+    text-transform: uppercase;
+}
+.show-menu-btn,.hide-menu-btn {
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+    display: none; 
+    padding: 0px 10px;
+    font-size: 25px;
+}
+.show-menu-btn {
+    float: right;
+}
+.show-menu-btn i {
+    line-height: 80px;
+}
+.menu a:hover,.show-menu-btn:hover,.hide-menu-btn:hover {
+    color: #424242;
+}
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+@media screen and (max-width:768px) {
+    
+    /*TITULO DENTRO DEL NAVEGADOR*/
+    .nombrePagina {
+        display: inline;
+        position: relative;
+        font-size: 35px;
+        color: white;
+        padding: 0 10px;
+        transition: 0.4s;
+        float: left;
+        top: 20px;
+    }
+    .show-menu-btn,.hide-menu-btn {
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #313131;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    } 
+    .menu a {
+        display: block;
+        padding: 20px;
+    } 
+    .hide-menu-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #chk:checked ~ .menu {
+        right: 0;
+    } 
+}
+/*CARRITO DENTRO DEL NAVEGADOR*/
+.carrito {
+    color: white;
+    text-decoration: none;
+    padding: 0 20px;
+    transition: 0.4s;
+    float: right;
+    font-size: 25px;
+}
+
+.carrito:hover {
+    color: #424242;
+}
+
+/*TERMINA CARRITO */
+/*TERMINA NAVEGADOR*/
+/*TERMINA HEADER*/
+
+/*Banner*/
+.banner {
+    position: relative;
+    height: 600px;
+    color: #fff;
+    text-align: center;
+    background: url("https://www.librosdebabel.com/wp-content/uploads/2019/01/mas-vendidos-2018.jpg") no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+.banner:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.5);
+    z-index: 0;
+}
+.containerlogo {
+    position: relative;
+    top: 30%;
+    z-index: 111;
+}
+.logo {
+    width: 200px;
+    height: 200px;
+}
+.containerlogo h1 {
+    margin: 0;
+    font-size: 6em;
+    line-height: 1em;
+    color: #fff;
+}
+.containerlogo p {
+    margin: 0;
+    font-size: 1.4em;
+    font-style: italic;
+    font-family: serif;
+    color: #fff;
+}
+@media screen and (max-width:768px) {
+    .container {
+        top: 20%;
+    }
+}
+/*Termina Banner*/
+
+/*FOOTER*/
+.footer-site {
+    position: relative;
+}
+.footer-social a {
+    font-size: 35px;
+}
+
+footer.footer-site {
+    background-color: #313131;
+}
+/*TERMINA FOOTER*/
+
+
+/*LOGIN*/
+
+.sectionlogin{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.imglogin {
+    width: 100%;
+    height: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.formulario {
+    background-color: #999fa1;
+    border-width: 2px;
+    border-color: #444;
+    width: 100%;
+    height: 450px;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    display: inline-block;
+}
+
+.titulo-formulario {
+    font-family: 'Lusitana', serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #0d4659;
+    letter-spacing: 2px;
+    padding: 15px;
+}
+
+.form-group:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#send-button {
+    box-sizing: border-box;
+    width: 120px;
+    height: 60px;
+    color: #0D4659;
+    font-size: 1em;
+    text-transform: uppercase;
+    background-color: white;
+    border: none;
+    border-radius: 0px;
+    margin-top: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+#send-button:hover {
+    color: white;
+    background-color: #0D4659;
+}
+#sen-button:focus {
+    box-shadow: none;
+}
+form input[type=checkbox] {
+  color: #CFE3E3;
+    font-size: 0.5em;
+}
+
+@media screen and (max-width:992px) {
+    #nombre,
+    #apellido,
+    #email,
+    #contraseña {
+        width: 75%;
+        height: 30px;
+    }
+    .imglogin, .formulario {
+        height: 450px;
+    }
+    .sectionlogin {
+        margin-bottom: 15%;
+    }
+}
+@media screen and (max-width:768px) {
+    .sectionlogin {
+        margin-top: 20%;
+        margin-bottom: 65%;
+    }
+    .formulario {
+        height: 450px;
+    }
+}
+/*TERMINA LOGIN*/
+
+
+
+/*REGISTER*/
+
+.sectionregister {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+.imagenRegistro {
+    width: 100%;
+    height: 450px;
+}
+@media screen and (max-width:768px) {
+    .sectionregister {
+        margin-bottom: 100%;
+        margin-top: 20%;
+    }
+}
+
+.color-boton {
+    background-color: #00FF7F;
+}
+
+.color-boton:hover {
+  color: white;
+  background-color: #3CB371;
+}
+/*TERMINA REGISTER*/

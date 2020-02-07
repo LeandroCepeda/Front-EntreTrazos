@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,150 +13,99 @@
     <!--GOOGLE FONTS-->
     <link href="https://fonts.googleapis.com/css?family=Rubik|Sniglet&display=swap" rel="stylesheet">
     <!--BOOTSTRAP-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/home-styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header class="header-site">
+    <!--Header-->
+    <div class="header">
 
-        <div class="container-fluid p-0">
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand w-50 d-md-block d-none" href="home.html"><img class="img-fluid" src="img/logo.jpeg" alt="logo"></a>
-                <a class="d-md-none enlace-header" href=""><i class="d-md-none enlace-header fas fa-book"></i> EntreTrazos</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-bars text-light"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav w-100 justify-content-md-end align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link enlace-header" href="register.html" style="color: black;"> <strong>Registrarse</strong> </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link enlace-header" href="login.html" style="color: black;"> <strong>Ingresar</strong> </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#carritoVentana" class="nav-link enlace-header" data-toggle="modal" style="color: black;"><i class="fas fa-shopping-cart m-2 fa-2x"></i></a>
-                        </li>
-                    </ul>
-                </div>
+        <!--Navegador-->
+        <div class="nav-bar col-12">
 
+            <!--Nombre de la pagina-->
+            <h1 class="nombrePagina">
+                Entre Trazos
+            </h1>
+            <!--Carrito boton-->
+            <a class="carrito nav-link enlace-header" data-toggle="modal" href="#carritoVentana"><i id="carro"
+                    class="fas fa-cart-plus"></i></a>
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-menu-btn">
+                <i class="fas fa-ellipsis-h"></i>
+            </label>
 
-                <!--Ventana del carrito-->
-            <div class="modal fade" tabindex="-1" id="carritoVentana">
-                <div class="modal-dialog modal-xl modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header d-block">
-                            <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h1 style="text-align: center;">Carrito</h1>
-                        </div>
-                        <div class="modal-body">
-                                <div class="container">
-                                    <div class="row" style="display: flex; justify-content: center;">
-                                            <div class="col-10 d-block" style="display: flex; justify-content: center; vertical-align: middle;align-items: center;padding: 15px;background:#f0efef;">
-                                                    <img class="" src="img/libro1.jpg" alt="libro 1" style="width: 100px; height: 160px; border: solid 1px black;">
-                                                    <span style="font-size: 24px; margin-left: 5%; margin-top: 5%;"> 2 x <a href="productos/accion/elLibroDeLosLibros.html" style="color: black; font-size: 24px; margin-left: 5%;"> El libro de los libros</a></span>
-                                                    <span style="font-size: 24px; color: blue; margin-left: 5%;"><strong>$600</strong></span>
-                                                    <span style="font-size: 15px; margin-left: 2%;"><a href="" style="color: black;">eliminar uno</a></span>
-                                                    <span style="font-size: 15px; margin-left: 2%;"><a href="" style="color: black;">eliminar todo</a></span>
-                                                </div>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-primary">Vaciar carrito</button>
-                            <button class="btn btn-success">Comprar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </nav>
-        </div>
-
-    </header>
-        
-    <div class="container-fluid d-flex justify-content-between navegacion-mobile flex-column flex-md-row bg-dark">
-        <ul class="nav align-items-center d-flex flex-column flex-md-row d-md-flex">
-            <li class="nav-item text-center d-block d-md-inline-block">
-                <a class="nav-link active text-light" href="home.html">Home</a>
-            </li>
-            <li class="nav-item dropdown text-light text-center d-block d-md-inline-block">
-                <a
-                    class="nav-link dropdown-toggle text-light"
-                    href="#shop"
-                    id="navbarDropdown"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                >
-                    Categorias
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Suspenso</a>
-                    <a class="dropdown-item" href="#">Terror</a>
-                    <a class="dropdown-item" href="#">Romanticas</a>
-                    <a class="dropdown-item" href="productos/accion/accion.html">Accion</a>
-                </div>
-            </li>
-            
-            <li class="nav-item d-block d-md-none w-100 text-center">
-                <a class="nav-link active text-light" href="#">Libros Nuevos</a>
-            </li>
-            <li class="nav-item d-block d-md-none w-100 text-center">
-                <a class="nav-link active text-light" href="#">Libros Usados</a>
-            </li>
-            <li class="nav-item d-none d-md-block">
-                <a class="nav-link active text-light" href="productos/productos.html">Productos</a>
-        </ul>
-        <div class="d-flex align-items-center flex-column flex-md-row">
-            <input class="form-control mr-sm-2 m-2" type="search" placeholder="Buscá tu libro" aria-label="Search">
-            <i class="fas fa-search text-light d-md-block d-none"></i>
+            <ul class="menu">
+                <a href="home.html">Home</a>
+                <a href="productos.html">Productos</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>
         </div>
     </div>
+    <!--Fin header-->
+
 
     <main class="container mt-3 d-block">
-        <h2 style="text-align: center;">PREGUNTAS FRECUENTES</h2>
+        <div class="mt-5 pt-3 mb-4 text-center">
+            <h2 class="pt-5">PREGUNTAS FRECUENTES</h2>
+        </div>
+
         <div class="accordion text-center mb-5" id="accordionExample">
             <div class="card">
                 <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-link text-secondary " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    ¿ Cómo puedo comenzar a vender mis libros ?
-                    </button>
-                </h2>
+                    <h2 class="mb-0">
+                        <button class="btn btn-link text-secondary " type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿ Cómo puedo comenzar a vender mis libros ?
+                        </button>
+                    </h2>
                 </div>
-            
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
                     <div class="card-body">
-                        Para comenzar a vender tus libros unicamente debes registrarte en el sitio e ir a la seccion Vender
+                        Para comenzar a vender tus libros unicamente debes registrarte en el sitio e ir a la seccion
+                        Vender
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header" id="headingTwo">
                     <h2 class="mb-0">
-                        <button class="btn btn-link text-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        ¿ Cómo es la política de Costos de Envío ?
+                        <button class="btn btn-link text-secondary collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿ Cómo es la política de Costos de Envío ?
                         </button>
                     </h2>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
-                        Para compras iguales o superiores a AR$ 1500, no se cobran gastos de envío.- (sólo en Argentina, exceptuando Neuquén, Río Negro, Chubut, Santa Cruz y Tierra del Fuego). Enviamos su compra por Correo Argentino para compras nacionales y DHL para compras internacionales.
+                        Para compras iguales o superiores a AR$ 1500, no se cobran gastos de envío.- (sólo en Argentina,
+                        exceptuando Neuquén, Río Negro, Chubut, Santa Cruz y Tierra del Fuego). Enviamos su compra por
+                        Correo Argentino para compras nacionales y DHL para compras internacionales.
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header" id="headingThree">
                     <h2 class="mb-0">
-                        <button class="btn btn-link text-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        ¿ Puedo verificar mis Compras ?
+                        <button class="btn btn-link text-secondary collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿ Puedo verificar mis Compras ?
                         </button>
                     </h2>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                     <div class="card-body">
-                        Sí, es posible ver el estado de sus compras. En el márgen superior derecho presione en "Mi cuenta", y en el menú desplegable presione sobre "Mis Compras".
+                        Sí, es posible ver el estado de sus compras. En el márgen superior derecho presione en "Mi
+                        cuenta", y en el menú desplegable presione sobre "Mis Compras".
 
                         Se exhibirán todas las compras realizadas a EntreTrazos, en proceso o cerradas
                     </div>
@@ -164,14 +114,16 @@
             <div class="card">
                 <div class="card-header" id="headingFour">
                     <h2 class="mb-0">
-                        <button class="btn btn-link text-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Pregunta #4
+                        <button class="btn btn-link text-secondary collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Pregunta #4
                         </button>
                     </h2>
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                     <div class="card-body">
-                        Sí, es posible ver el estado de sus compras. En el márgen superior derecho presione en "Mi cuenta", y en el menú desplegable presione sobre "Mis Compras".
+                        Sí, es posible ver el estado de sus compras. En el márgen superior derecho presione en "Mi
+                        cuenta", y en el menú desplegable presione sobre "Mis Compras".
 
                         Se exhibirán todas las compras realizadas a EntreTrazos, en proceso o cerradas
                     </div>
@@ -180,14 +132,16 @@
             <div class="card">
                 <div class="card-header" id="headingFive">
                     <h2 class="mb-0">
-                        <button class="btn btn-link text-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Pregunta #5
+                        <button class="btn btn-link text-secondary collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Pregunta #5
                         </button>
                     </h2>
                 </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                     <div class="card-body">
-                        Sí, es posible ver el estado de sus compras. En el márgen superior derecho presione en "Mi cuenta", y en el menú desplegable presione sobre "Mis Compras".
+                        Sí, es posible ver el estado de sus compras. En el márgen superior derecho presione en "Mi
+                        cuenta", y en el menú desplegable presione sobre "Mis Compras".
 
                         Se exhibirán todas las compras realizadas a EntreTrazos, en proceso o cerradas
                     </div>
@@ -196,6 +150,7 @@
         </div>
     </main>
 
+    <!--FOOTER-->
     <footer class="footer-site">
         <div class="container-fluid">
             <div class="row text-left">
@@ -207,13 +162,13 @@
                         <a class="mr-3 text-light" href="www.twitter.com"><i class="fab fa-twitter"></i></a>
                         <a class="mr-3 text-light" href="www.youtube.com"><i class="fab fa-youtube"></i></a>
                         <a class="mr-3 text-light" href="plus.google.com"><i class="fab fa-google-plus"></i></a>
-                </div>
-                    
+                    </div>
+
                 </div>
                 <div class="col-md-6 col-sm-12 text-md-right text-center">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Acerca de Nosotros</a>
+                            <a class="nav-link text-light" href="nosotros.html">Acerca de Nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="contacto.html">Contacto</a>
@@ -223,17 +178,26 @@
                         </li>
                     </ul>
                 </div>
-                <p class=" mt-2 text-light w-100 text-center">Copyright ©2019 Todos los derechos reservados | Página creada por <span>EntreTrazos</span></p>
+                <p class=" mt-2 text-light w-100 text-center">Copyright ©2019 Todos los derechos reservados | Página
+                    creada por <span>EntreTrazos</span></p>
             </div>
 
         </div>
     </footer>
-    
+    <!--Fin footer-->
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

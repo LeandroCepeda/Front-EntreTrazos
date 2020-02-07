@@ -8,7 +8,7 @@ function mostrarMasDetallesLibro(idLibro) {
     fetch("http://localhost:8080/api/libro/" + idLibro)
         .then(respuesta => respuesta.json())
         .then(libro => {
-            $('#mas-detalles-libro').append(`<div class="row">
+            $('#mas-detalles-libro').append(`<div class="row mt-5">
             <div class="shop-item w-100 col-12 row">
                 <div class="col-12 col-md-4 text-center mt-5">
                     <img src="${libro.imagen.url}" alt="libro" class="img-fluid border border-secondary shop-item-image">

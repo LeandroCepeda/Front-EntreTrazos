@@ -1,28 +1,29 @@
-<div class="container-fluid p-0">
-	<nav class="navbar navbar-expand-lg">
-		<a class="navbar-brand w-50 d-md-block d-none" href="home.html"><img class="img-fluid" src="img/logo.jpeg"
-				alt="logo"></a>
-		<a class="d-md-none enlace-header" href=""><i class="d-md-none enlace-header fas fa-book"></i>
-			EntreTrazos</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<i class="fas fa-bars text-light"></i>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav w-100 justify-content-md-end align-items-center">
-				<li class="nav-item">
-					<a class="nav-link enlace-header" href="register.html" style="color: black;">
-						<strong>Registrarse</strong> </a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link enlace-header" href="login.html" style="color: black;">
-						<strong>Ingresar</strong> </a>
-				</li>
-				<li class="nav-item">
-					<a href="#carritoVentana" class="nav-link enlace-header" data-toggle="modal"
-						style="color: black;"><i class="fas fa-shopping-cart m-2 fa-2x"></i></a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+   <!--Header-->
+   <div class="header">
+        
+	<!--Navegador-->
+	<div class="nav-bar col-12">
+
+		<!--Nombre de la pagina-->
+		<h1 class="nombrePagina">
+			Entre Trazos
+		</h1>
+		<!--Carrito boton-->
+		<a class="carrito nav-link enlace-header" data-toggle="modal" href="#carritoVentana"><i id="carro" class="fas fa-cart-plus"></i></a>
+		<input type="checkbox" id="chk">
+		<label for="chk" class="show-menu-btn">
+			<i class="fas fa-ellipsis-h"></i>
+		</label>
+		
+		<ul class="menu">
+			<a href="home.html">Home</a>
+			<a href="productos.html">Productos</a>
+			<a href="login.html">Login</a>
+			<a href="register.html">Register</a>
+			<label for="chk" class="hide-menu-btn">
+				<i class="fas fa-times"></i>
+			</label>
+		</ul>
+	</div>
 </div>
+<!--Fin header-->
