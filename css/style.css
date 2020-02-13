@@ -55,8 +55,7 @@ body {
     color: white;
     transition: 0.4s;
     cursor: pointer;
-    display: none; 
-    padding: 0px 10px;
+    display: none;
     font-size: 25px;
 }
 .show-menu-btn {
@@ -79,12 +78,11 @@ body {
     .nombrePagina {
         display: inline;
         position: relative;
-        font-size: 35px;
+        font-size: 20px;
         color: white;
-        padding: 0 10px;
         transition: 0.4s;
         float: left;
-        top: 20px;
+        top: 27px;
     }
     .show-menu-btn,.hide-menu-btn {
         display: block;

@@ -99,7 +99,6 @@ function validarFormulario(event) {
         const $exito = document.querySelector('#exito');
         const $inputs = document.querySelectorAll(".form-control");
 
-
         let url = 'http://localhost:8080/api/usuario/';
         var data = {
             nombre: `${nombre}`,
@@ -109,6 +108,7 @@ function validarFormulario(event) {
             password: `${contraseña}`
         };
 
+        
         fetch(url, {
             method: 'POST', // or 'PUT'
             body: JSON.stringify(data), // data can be `string` or {object}!
@@ -117,21 +117,29 @@ function validarFormulario(event) {
             }
         }).then(res => {
             if (res.status === 409) {
-                const $errorMensaje = document.createElement('p');
+                return res.json();
 
-                $errorPeticion.className = ""; //muestro el div con id "error-peticion"
-                $form.email.classList.add("error"); //agrego al input email un borde rojo
-                $errorMensaje.className = "error-texto"; // parrafo de color rojo
-                $errorMensaje.innerText = "Ya existe un usuario con ese correo electronico";
-                $errorPeticion.appendChild($errorMensaje); //agrego parrafo al div de errores
             } else {
                 $exito.className = "";
                 $inputs.forEach(function (input) {
                     input.disabled = true;
                 })
+                return res.json();
+            }
+        }).then(json => {
+            if (json.message != undefined) {
+                const $errorMensaje = document.createElement('p');
+                $errorPeticion.className = ""; //muestro el div con id "error-peticion"
+                $form.email.classList.add("error"); //agrego al input email un borde rojo
+                $errorMensaje.className = "error-texto"; // parrafo de color rojo
+                $errorMensaje.innerText = json.message;
+                $errorPeticion.appendChild($errorMensaje); //agrego parrafo al div de errores
+            } else {
+                console.log("Success:", json);
                 setTimeout(function () { location.href = "home.html" }, 3000);
             }
-        })
+
+        }).catch(error => console.error('Error:', error));
     }
 }
 
