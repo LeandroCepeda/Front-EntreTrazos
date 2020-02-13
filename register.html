@@ -57,47 +57,62 @@
           <img class="imagenRegistro" src="img\libreria.jpg" alt="imagenRegistro">
         </div>
         <div class="col-12 col-md-6 p-0">
-          <form class="formulario" action="index.html" method="post">
+          <div class="formulario">
             <article class="card-body mx-auto" style="max-width: 400px;">
               <h4 class="card-title text-center titulo-formulario">¡REGISTRATE!</h4>
-              <form>
+              <form id="formulario-registro" method="post">
                 <div class="form-group input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                   </div>
-                  <input name="" class="form-control" placeholder="Nombre completo" type="text">
+                  <input name="nombre" class="form-control" placeholder="Ingrese su nombre" type="text">
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                  </div>
+                  <input name="apellido" class="form-control" placeholder="Ingrese su apellido" type="text">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                   </div>
-                  <input name="" class="form-control" placeholder="Correo electrónico" type="email">
+                  <input name="email" class="form-control" placeholder="Ingrese su correo electrónico" type="email">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                   </div>
-                  <input name="" class="form-control" placeholder="Número de teléfono" type="text">
+                  <input name="fecha-nacimiento" class="form-control" placeholder="Ingrese su fecha de nacimiento"
+                    type="text">
                 </div> <!-- form-group end.// -->
                 <div class="form-group input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                   </div>
-                  <input class="form-control" placeholder="Crear contraseña" type="password">
-                </div> <!-- form-group// -->
-                <div class="form-group input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                  </div>
-                  <input class="form-control" placeholder="Repetir contraseña" type="password">
-                </div> <!-- form-group// -->
-                <div class="">
-                  <button type="submit" class="btn color-boton"> Crear Cuenta </button>
-                  <p class="text-center mt-2">Tienes una cuenta? <a href="login.html" class="text-white">Ingresá</a> </p>
+                  <input name="contraseña" class="form-control" placeholder="Ingrese su contraseña" type="password">
                 </div> <!-- form-group// -->
 
-              </form>
-            </article>
+                <ul id="errores">
+
+                </ul>
+
+                <div id="exito" class="oculto">
+                  <strong>Te has registrado con exito!!!</strong>
+                </div>
+
+                <div id="error-peticion" class="oculto">
+                  
+                </div>
+
+                <div class="">
+                  <button type="submit" class="btn color-boton"> Crear Cuenta </button>
+                  <p class="text-center mt-2">Tienes una cuenta? <a href="login.html" class="text-white">Ingresá</a>
+                  </p>
+                </div> <!-- form-group// -->
+
+          </div>
+          </article>
           </form>
         </div> <!-- card.// -->
 
@@ -106,40 +121,41 @@
     </div>
   </div>
   <!--FIN SECTION REGISTER-->
-      <!--FOOTER-->
-      <footer class="footer-site">
-        <div class="container-fluid">
-            <div class="row text-left">
-                <div class="col-md-6 col-sm-12 footer-social text-center text-md-left">
-                    <h5 class="text-light mt-2 pr-3">Seguinos en nuestras Redes</h5>
-                    <div class="column text-light mt-3 mb-3 pr-4">
-                        <a class="mr-3 text-light" href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                        <a class="mr-3 text-light" href="www.instagram.com"><i class="fab fa-instagram"></i></a>
-                        <a class="mr-3 text-light" href="www.twitter.com"><i class="fab fa-twitter"></i></a>
-                        <a class="mr-3 text-light" href="www.youtube.com"><i class="fab fa-youtube"></i></a>
-                        <a class="mr-3 text-light" href="plus.google.com"><i class="fab fa-google-plus"></i></a>
-                </div>
-
-                </div>
-                <div class="col-md-6 col-sm-12 text-md-right text-center">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="nosotros.html">Acerca de Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
-                        </li>
-                    </ul>
-                </div>
-                <p class=" mt-2 text-light w-100 text-center">Copyright ©2019 Todos los derechos reservados | Página creada por <span>EntreTrazos</span></p>
-            </div>
+  <!--FOOTER-->
+  <footer class="footer-site">
+    <div class="container-fluid">
+      <div class="row text-left">
+        <div class="col-md-6 col-sm-12 footer-social text-center text-md-left">
+          <h5 class="text-light mt-2 pr-3">Seguinos en nuestras Redes</h5>
+          <div class="column text-light mt-3 mb-3 pr-4">
+            <a class="mr-3 text-light" href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a class="mr-3 text-light" href="www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a class="mr-3 text-light" href="www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a class="mr-3 text-light" href="www.youtube.com"><i class="fab fa-youtube"></i></a>
+            <a class="mr-3 text-light" href="plus.google.com"><i class="fab fa-google-plus"></i></a>
+          </div>
 
         </div>
-    </footer>
-<!--Fin footer-->
+        <div class="col-md-6 col-sm-12 text-md-right text-center">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="nosotros.html">Acerca de Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
+            </li>
+          </ul>
+        </div>
+        <p class=" mt-2 text-light w-100 text-center">Copyright ©2019 Todos los derechos reservados | Página creada por
+          <span>EntreTrazos</span></p>
+      </div>
+
+    </div>
+  </footer>
+  <!--Fin footer-->
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -151,6 +167,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="js/registrar-usuario.js"></script>
 </body>
 
 </html>

@@ -203,7 +203,7 @@ footer.footer-site {
 }
 .imglogin {
     width: 100%;
-    height: 450px;
+    height: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -212,8 +212,6 @@ footer.footer-site {
     border-width: 2px;
     border-color: #444;
     width: 100%;
-    height: 450px;
-    position: absolute;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     display: inline-block;
@@ -266,9 +264,6 @@ form input[type=checkbox] {
         width: 75%;
         height: 30px;
     }
-    .imglogin, .formulario {
-        height: 450px;
-    }
     .sectionlogin {
         margin-bottom: 15%;
     }
@@ -276,10 +271,6 @@ form input[type=checkbox] {
 @media screen and (max-width:768px) {
     .sectionlogin {
         margin-top: 20%;
-        margin-bottom: 65%;
-    }
-    .formulario {
-        height: 450px;
     }
 }
 /*TERMINA LOGIN*/
@@ -315,11 +306,10 @@ form input[type=checkbox] {
 }
 .imagenRegistro {
     width: 100%;
-    height: 450px;
+    height: 100%;
 }
 @media screen and (max-width:768px) {
     .sectionregister {
-        margin-bottom: 100%;
         margin-top: 20%;
     }
 }
@@ -331,6 +321,24 @@ form input[type=checkbox] {
 .color-boton:hover {
   color: white;
   background-color: #3CB371;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.error-texto {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.oculto {
+    display: none;
+}
+
+#exito {
+    color: #00FF7F;
+    margin: 10px;
 }
 /*TERMINA REGISTER*/
 
