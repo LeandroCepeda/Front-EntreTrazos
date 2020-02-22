@@ -44,7 +44,7 @@ function mostrarMasDetallesLibro(idLibro) {
                     $('#nombre-categoria').append(`<h3>Libros de la categoría ${libro.categoria.nombre} que te pueden interesar</h3>`)
                     for (libro of librosCategoria) {
                         $('#libros-misma-categoria').append(`
-                    <div class="col-md-3 col-sm-6 col-12 mb-5">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
                         <div class="card h-100 shop-item">
                             <div class="card-img-top">
                                 <img class="img-fluid w-100 shop-item-image" src="${libro.imagen.url}" alt="libro 1">    
@@ -53,6 +53,7 @@ function mostrarMasDetallesLibro(idLibro) {
                                 <h5 class="shop-item-title">${libro.titulo}</h5>
                                 <h5 class="shop-item-price">$ ${libro.precio}</h5>
                                 <button class="btn btn-secondary d-block m-auto shop-item-button"><i class="fas fa-cart-plus"></i> Agregar al carro</button>
+                                <a href="detalle-libro.html?id=${libro.id}" class="btn color-boton mt-3" id="boton-modal")">Detalles</a>
                             </div>
                         </div>
                     </div>`)

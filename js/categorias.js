@@ -22,13 +22,13 @@ categoriaFantasia.onclick = function (evento) {
     evento.preventDefault();
 }
 
-//CATEGORIA NOVELA
-const categoriaNovela = document.querySelector('.Novela');
-categoriaNovela.onclick = function (evento) {
+//CATEGORIA DEPORTE
+const categoriaDeporte = document.querySelector('.Deporte');
+categoriaDeporte.onclick = function (evento) {
     while(contenedorCategorias.hasChildNodes()){
         contenedorCategorias.removeChild(contenedorCategorias.firstChild)
     }
-    mostrarCategoria(categoriaNovela.className);
+    mostrarCategoria(categoriaDeporte.className);
     evento.preventDefault();
 }
 
@@ -99,7 +99,7 @@ function mostrarLibrosPorCategoria(categoria, nombre) {
         .then(librosJSON => {
             for (libro of librosJSON) {
                 $(`#${nombre}`).append(`
-    <div class="col-md-3 col-sm-6 col-12 mb-5">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
         <div class="card h-100 shop-item">
             <div class="card-img-top">
                 <img class="img-fluid w-100 shop-item-image" src="${libro.imagen.url}" alt="libro 1">

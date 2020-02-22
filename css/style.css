@@ -355,3 +355,12 @@ div.lista-categorias ul li i {
 div.lista-categorias ul li a {
     color: #32CD32;
 }
+
+
+/*IMAGENES*/
+@media(min-width: 576px) {
+    .card-img-top img  {
+        height: 350px;
+    }
+}
+

@@ -7,7 +7,7 @@ fetch("http://localhost:8080/api/libro/")
 
         for (libro of respuestaJSON) {
             $('#seccion-mas-buscados').append(`
-            <div class="col-md-3 col-sm-6 col-12 mb-5">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5">
                 <div class="card h-100 shop-item">
                     <div class="card-img-top">
                         <img class="img-fluid w-100 shop-item-image" src="${libro.imagen.url}" alt="libro 1">
