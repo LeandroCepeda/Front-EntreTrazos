@@ -6,7 +6,8 @@ El front-end fue desarrollado utilizando:
 * Bootstrap
 * JavaScript
 
-Click en el link para probar la aplicación: https://entretrazos.now.sh 
+Click en el link para probar la aplicación: https://entretrazos.now.sh
 
-<img src="img/header.png" width= "85%">
-<img src="img/detalle-libro.png" width= "85%">
+<img src="img/header.PNG" width= "100%" style="text-align:center;">
+
+<img src="img/detalle-libro.PNG" width= "100%" style="text-align:center;">
